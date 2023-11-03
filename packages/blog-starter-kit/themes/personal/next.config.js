@@ -24,6 +24,10 @@ const config = {
 				protocol: 'https',
 				hostname: 'cdn.hashnode.com',
 			},
+			{
+				protocol: 'https',
+				hostname: 'pbs.twimg.com',
+			},
 		],
 	},
 	async rewrites() {

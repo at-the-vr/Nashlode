@@ -3,6 +3,7 @@ import { resizeImage } from '@starter-kit/utils/image';
 import Link from 'next/link';
 import { PublicationNavbarItem } from '../generated/graphql';
 import { useAppContext } from './contexts/appContext';
+import ThemeToggler from './theme-toggler';
 
 function hasUrl(
 	navbarItem: PublicationNavbarItem,
@@ -60,7 +61,7 @@ export const PersonalHeader = () => {
 	);
 
 	return (
-		<header className="grid grid-cols-2 items-center gap-5 ">
+		<header className="grid grid-cols-3 items-center gap-5 ">
 			<div className="col-span-full md:col-span-1">
 				<h1>
 					<Link
@@ -92,6 +93,7 @@ export const PersonalHeader = () => {
           icon={<NewsletterPlusSVG className="w-5 h-5 fill-current" />}
         /> */}
 			</div>
+			<ThemeToggler/>
 		</header>
 	);
 };

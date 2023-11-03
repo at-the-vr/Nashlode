@@ -12,7 +12,13 @@ export const Layout = ({ children }: Props) => {
 		<>
 			<Meta />
 			<Scripts />
-			<div className="min-h-screen bg-white dark:bg-neutral-950">
+			<div className="font-sometypeMono bg-light-bg dark:bg-dark-bg min-h-screen">
+				<a
+					className="absolute left-0 m-3 -translate-y-16 transition focus:translate-y-0 sr-only focus:not-sr-only"
+					href="#main-content"
+				>
+					Skip Navigation
+				</a>
 				<main>{children}</main>
 			</div>
 			<Analytics />

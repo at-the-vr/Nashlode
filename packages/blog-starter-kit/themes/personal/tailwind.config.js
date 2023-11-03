@@ -2,9 +2,13 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
+	darkMode: 'class',
 	content: ['./components/**/*.tsx', './pages/**/*.tsx'],
 	theme: {
 		extend: {
+			fontFamily: {
+				sometypeMono: ['Sometype Mono', 'monospace'],
+			},
 			colors: {
 				'accent-1': '#FAFAFA',
 				'accent-2': '#EAEAEA',
@@ -12,6 +16,8 @@ module.exports = {
 				success: '#0070f3',
 				cyan: '#79FFE1',
 				primary: colors.blue,
+				'dark-bg': '#152937',
+				'light-bg': '#F1F4F6',
 			},
 			spacing: {
 				28: '7rem',
