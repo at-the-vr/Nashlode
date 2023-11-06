@@ -1,5 +1,5 @@
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-import { resizeImage } from '@starter-kit/utils/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import { PublicationNavbarItem } from '../generated/graphql';
 import { useAppContext } from './contexts/appContext';
@@ -70,14 +70,12 @@ export const PersonalHeader = () => {
 						aria-label={`${publication.author.name}'s blog home page`}
 					>
 						{publication.author.profilePicture && (
-							<img
+							<Image
 								className="block h-8 w-8 rounded-full fill-current"
+								src={publication.author.profilePicture}
+								width={400}
+								height={400}
 								alt={publication.author.name}
-								src={resizeImage(publication.author.profilePicture, {
-									w: 400,
-									h: 400,
-									c: 'face',
-								})}
 							/>
 						)}
 						{publication.title}
@@ -93,7 +91,7 @@ export const PersonalHeader = () => {
           icon={<NewsletterPlusSVG className="w-5 h-5 fill-current" />}
         /> */}
 			</div>
-			<ThemeToggler/>
+			<ThemeToggler />
 		</header>
 	);
 };
