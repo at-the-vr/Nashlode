@@ -5,9 +5,9 @@ export const Footer = () => {
 	const { publication } = useAppContext();
 
 	return (
-		<footer className="border-t pt-5 border-slate-400 text-sm text-center text-neutral-600 dark:border-amber-50 dark:text-neutral-400">
+		<footer className="border-t border-slate-400 pt-5 text-center text-sm text-neutral-600 dark:border-amber-50 dark:text-neutral-400">
 			&copy; {new Date().getFullYear()} {publication.title}
-			<Social/>
+			<Social />
 		</footer>
 	);
 };

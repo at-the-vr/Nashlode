@@ -14,7 +14,7 @@ export const Layout = ({ children }: Props) => {
 			<Scripts />
 			<div className="font-sometypeMono bg-light-bg dark:bg-dark-bg min-h-screen">
 				<a
-					className="absolute left-0 m-3 -translate-y-16 transition focus:translate-y-0 sr-only focus:not-sr-only"
+					className="sr-only absolute left-0 m-3 -translate-y-16 transition focus:not-sr-only focus:translate-y-0"
 					href="#main-content"
 				>
 					Skip Navigation

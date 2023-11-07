@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { PostFragment } from '../generated/graphql';
+import BlogAuthors from './blog-authors';
 import { MinimalPostPreview } from './minimal-post-preview';
 import QuoteBlock from './quote-block';
-import BlogAuthors from './blog-authors';
 
 type Props = {
 	posts: PostFragment[];
@@ -17,15 +17,15 @@ export const MinimalPosts = ({ posts }: Props) => {
 	const startIndex = (currentPage - 1) * postsPerPage;
 	const endIndex = startIndex + postsPerPage;
 	const postsToDisplay = posts.slice(startIndex, endIndex);
-	
+
 	// Handle page change
 	const handlePageChange = (pageNumber: number) => {
 		setCurrentPage(pageNumber);
 	};
 
 	return (
-		<section id='main-content' className="flex w-full flex-col items-stretch gap-10 lg:max-w-lg">
-			<QuoteBlock/>
+		<section id="main-content" className="flex w-full flex-col items-stretch gap-10 lg:max-w-lg">
+			<QuoteBlock />
 			{postsToDisplay.map((post) => (
 				<MinimalPostPreview
 					key={post.id}
@@ -45,7 +45,9 @@ export const MinimalPosts = ({ posts }: Props) => {
 						key={index}
 						onClick={() => handlePageChange(index + 1)}
 						className={`${
-							currentPage === index + 1 ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-blue-400'
+							currentPage === index + 1
+								? 'bg-blue-500 text-white'
+								: 'bg-gray-200 text-gray-700 hover:bg-blue-400'
 						} rounded-md px-3 py-2`}
 					>
 						{index + 1}
@@ -54,7 +56,8 @@ export const MinimalPosts = ({ posts }: Props) => {
 			</div>
 
 			{/* Blog Authors Section  */}
-			<div className='grid gap-4'>Check out these Developers enabling Developers 🤩
+			<div className="grid gap-4">
+				Check out these Developers enabling Developers 🤩
 				<BlogAuthors />
 			</div>
 		</section>

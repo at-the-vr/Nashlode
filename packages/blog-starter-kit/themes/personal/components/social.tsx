@@ -3,12 +3,14 @@ export const Social = () => {
 		<div className="mt-4 flex items-center justify-center">
 			<a
 				href="https://twitter.com/hashnode"
-				className="ml-4 has-tooltip"
+				className="has-tooltip ml-4"
 				aria-label="Twitter"
 				rel="noopener noreferrer"
 				target="_blank"
 			>
-				<span className='tooltip rounded shadow-lg p-1 bg-gray-100 text-red-500 -mt-7'>Twitter/X</span>
+				<span className="tooltip -mt-7 rounded bg-gray-100 p-1 text-red-500 shadow-lg">
+					Twitter/X
+				</span>
 				<svg
 					className="hover:text-gray-800 dark:hover:text-slate-200"
 					xmlns="http://www.w3.org/2000/svg"
@@ -24,12 +26,14 @@ export const Social = () => {
 			</a>
 			<a
 				href="https://hashnode.com"
-				className="ml-4 has-tooltip"
+				className="has-tooltip ml-4"
 				aria-label="Hashnode"
 				rel="noopener noreferrer"
 				target="_blank"
 			>
-				<span className='tooltip rounded shadow-lg p-1 bg-gray-100 text-red-500 -mt-7'>Hashnode</span>
+				<span className="tooltip -mt-7 rounded bg-gray-100 p-1 text-red-500 shadow-lg">
+					Hashnode
+				</span>
 				<svg
 					className="hover:text-blue-700 dark:hover:text-blue-700"
 					xmlns="http://www.w3.org/2000/svg"
@@ -45,12 +49,12 @@ export const Social = () => {
 			</a>
 			<a
 				href="https://github.com/hashnode"
-				className="ml-4 has-tooltip"
+				className="has-tooltip ml-4"
 				aria-label="Github"
 				rel="noopener noreferrer"
 				target="_blank"
 			>
-				<span className='tooltip rounded shadow-lg p-1 bg-gray-100 text-red-500 -mt-7'>Github</span>
+				<span className="tooltip -mt-7 rounded bg-gray-100 p-1 text-red-500 shadow-lg">Github</span>
 				<svg
 					className="hover:text-gray-800 dark:hover:text-slate-200"
 					xmlns="http://www.w3.org/2000/svg"
